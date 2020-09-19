@@ -21,13 +21,8 @@
 
 <% end %>
 -->
-
-<%= form_with model: @user do |f|%>
-<%= f.label(:username, "Username") %>
-<%= f.text_field :username %> <br><br>
-<%= f.label(:email, "Email")%>
-<%= f.text_field :email, placeholder: "example@example.com" %> <br><br>
-<%= f.label(:password, "Password") %>
-<%= f.password_field :password %> <br><br>
-<%= f.submit "Create"%>
-<% end %>
+<div class="form">
+<h2>Create New User</h2>
+<%= render partial: 'form' %>
+<%= link_to "Go back", users_path%>
+</div>

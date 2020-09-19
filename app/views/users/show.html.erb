@@ -4,4 +4,7 @@
 <p> <span> User email:</span> <%= @user.email%> </p>
 <p> <span> Created at:  </span> <%= @user.created_at%> </p>
 <p> <span> Updated at:  </span> <%= @user.updated_at%> </p>
+
 </div>
+
+<%= link_to "Go back", users_path, class:"go_back"%>

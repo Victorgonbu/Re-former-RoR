@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   
       flash.notice = "User '#{@user.username}' Updated!"
   
-      redirect_to new_user_path
+      redirect_to users_path
     end
 
     def destroy
