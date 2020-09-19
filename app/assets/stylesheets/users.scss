@@ -1,3 +1,127 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+    box-sizing: border-box;
+    
+}
+h1 {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    background-color: #FF8066;
+    border-top: 1px solid #4B4453;
+    color: whitesmoke;
+    .create_new {
+        position: absolute;
+        right: 2em;
+        top: 0.4em;
+        border-bottom:  1px solid #FEFEDF;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 0.7em;
+        a { 
+            display: block;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 0 3px;
+        }
+        a:hover {
+            background-color: #FEFEDF;
+            color: #FF8066;
+        }
+        
+    }
+}
+
+.list {
+    margin: 0;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #FF8066;
+    padding: 2em;
+    li {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3em;
+        list-style: none;
+        padding: 5px;
+        border: 1px solid #FEFEDF;
+        color: black;
+        text-transform: capitalize;
+    }
+
+    li:hover {
+        background-color: #FEFEDF;
+        border-bottom: 1px solid #4B4453;
+    }
+}
+
+.options {
+    a {
+        padding: 0 5px;
+        color: #FF8066;
+        text-decoration: none;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    max-height: 100vh;
+    background-color: #FFE5D9;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-top: 0;
+    
+}
+
+.user_fields {
+    border: 1px solid #3A001E;
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
+    margin: 2em auto;
+    text-align: center;
+    display:  flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    h2 {
+        
+        background-color: white;
+        margin: 0;
+        margin-bottom: 10px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FF8066;
+        font-size: 2em;
+    }
+
+    p {
+        margin-top: 0;
+        font-size: 1.2em;
+       span {
+           display: block;
+           padding: 5px;
+
+       }
+
+       span:hover {
+        color: #FF8066;
+       }
+    }
+    p:hover {
+        background-color:#FEFEDF;
+    }
+}

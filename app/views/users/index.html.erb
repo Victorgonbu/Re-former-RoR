@@ -1,0 +1,17 @@
+<div class="container">
+<h1>USER LIST <span class="create_new"><%= link_to "Create new user", new_user_path %></span> </h1>
+
+<ul class="list">
+<% @users.each do |user|%>
+<li>
+<%= user.username%>
+<div class="options">
+<%= link_to "Info", user_path(user)%>
+<%= link_to "Edit", edit_user_path(user)%>
+<%= link_to "Delete", user_path(user), method: :delete, data: {confirm: "Are you sure?"} %>
+<div>
+
+</li>
+<% end %>
+<ul>
+<div>
