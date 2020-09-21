@@ -1,17 +1,5 @@
-<%= form_with model: @user do |f|%>
-  <%= @user.errors.any? %>
-  <div>
-    <%= f.label(:username, "Username")%>
-    <%= f.text_field(:username)%>
-  </div>
-  <div>
-    <%= f.label(:email, "Email")%>
-    <%= f.text_field(:email, placeholder: "example@example.com")%>
-  </div>
-  <div>
-    <%= f.label(:password, "Password")%>
-    <%= f.password_field(:password)%>
-  </div>
-  <%= f.submit "Update"%>
+<div class="form">
+<h1>Update User</h2>
 
-<% end %>
+<%= render partial: "form" %>
+</div>

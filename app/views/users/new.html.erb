@@ -38,21 +38,8 @@
 <% end %>
 
 </div>-->
+<div class="form">
+<h1>Create New User</h1>
 
-<%= form_with model: @user do |f|%>
-  <div>
-    <%= f.label(:username, "Username")%>
-    <%= f.text_field(:username)%>
-  </div>
-   <div>
-    <%= f.label(:email, "Email")%>
-    <%= f.text_field(:email, placeholder: "example@example.com")%>
-  </div>
-   <div>
-    <%= f.label(:password, "Password")%>
-    <%= f.password_field(:password)%>
-  </div>
-  <%= f.submit "Create"%>
-<% end %>
-
-  <%= @user[:username] %>
+<%= render partial: "form" %>
+</div>
