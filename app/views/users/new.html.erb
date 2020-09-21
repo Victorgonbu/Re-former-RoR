@@ -1,4 +1,4 @@
-<div>
+<!--  <div>
   <form action="/users" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <div>
@@ -15,4 +15,42 @@
     </div>
     <input type="submit">
   </form>
-</div>
+
+  <%= form_with(url: "/users", method: "post") do %>
+
+  <div>
+    <%= label_tag(:username, "Username") %>
+    <%= text_field_tag(:username)%>
+  </div>
+  <div>
+    <%= label_tag(:email, "Email") %>
+    <%= text_field_tag(:email)%>
+  </div>
+
+  <div>
+    <%= label_tag(:password, "Password") %>
+    <%= password_field_tag(:password) %>
+  </div>
+
+  <%= submit_tag("Create") %>
+
+
+<% end %>
+
+</div>-->
+
+<%= form_with model: @user do |f|%>
+  <div>
+    <%= f.label(:username, "Username")%>
+    <%= f.text_field(:username)%>
+  </div>
+   <div>
+    <%= f.label(:email, "Email")%>
+    <%= f.text_field(:email, placeholder: "example@example.com")%>
+  </div>
+   <div>
+    <%= f.label(:password, "Password")%>
+    <%= f.password_field(:password)%>
+  </div>
+  <%= f.submit "Create"%>
+<% end %>
