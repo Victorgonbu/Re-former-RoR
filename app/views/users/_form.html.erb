@@ -1,4 +1,12 @@
-<%= form_with model: @user do |f|%>
+<%= form_for @user do |f|%>
+
+<% if @user.errors.any? %>
+    <% @user.errors.full_messages.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+<% end %>
+   
+
 <%= f.label(:username, "Username") %>
 <%= f.text_field :username %> 
 <%= f.label(:email, "Email")%>
