@@ -60,6 +60,7 @@ h1 {
         input {
             margin-bottom: 1em;
             padding: 8px;
+            width: 90%;
         }
         .submit {
             border: none;
@@ -93,6 +94,19 @@ h1 {
 
 .go_back:hover {
     text-decoration: underline;
+}
+
+
+.field_with_errors {
+    input {
+        border: 1px solid #FF8066;
+    }
+    
+}
+
+.errors {
+     margin: 5px 0;
+     color:#FF8066;
 }
 
 .list {
