@@ -1,0 +1,45 @@
+<!--  <div>
+  <form action="/users" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <div>
+      <label>Username:</label>
+      <input type="text" name="user[username]">
+    </div>
+    <div>
+      <label>Email:</label>
+      <input type="email" name="user[email]">
+    </div>
+    <div>
+      <label>Password</label>
+      <input type="password" name="user[password]">
+    </div>
+    <input type="submit">
+  </form>
+
+  <%= form_with(url: "/users", method: "post") do %>
+
+  <div>
+    <%= label_tag(:username, "Username") %>
+    <%= text_field_tag(:username)%>
+  </div>
+  <div>
+    <%= label_tag(:email, "Email") %>
+    <%= text_field_tag(:email)%>
+  </div>
+
+  <div>
+    <%= label_tag(:password, "Password") %>
+    <%= password_field_tag(:password) %>
+  </div>
+
+  <%= submit_tag("Create") %>
+
+
+<% end %>
+
+</div>-->
+<div class="form">
+<h1>Create New User</h1>
+
+<%= render partial: "form" %>
+</div>
